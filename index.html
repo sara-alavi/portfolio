@@ -619,16 +619,18 @@
   }
   .lead-item{
     display:grid;
-    grid-template-columns:1fr 1.6fr auto;
-    gap:20px;
-    align-items:baseline;
+    grid-template-columns:1fr 1.5fr auto;
+    gap:24px;
+    align-items:start;
     padding:22px 0;
     border-bottom:1px solid var(--line);
   }
   .lead-item:first-child{ border-top:1px solid var(--line); }
+  .lead-heading{ display:flex; flex-direction:column; gap:3px; }
   .lead-role{ font-weight:600; color:var(--text); font-size:15.5px; }
-  .lead-desc{ color:var(--muted); font-size:14px; }
-  .lead-date{ font-family:var(--mono); font-size:12px; color:var(--cyan); text-align:right; white-space:nowrap; }
+  .lead-org{ font-style:italic; color:var(--muted); font-size:13px; }
+  .lead-desc{ color:var(--muted); font-size:14px; padding-top:1px; }
+  .lead-date{ font-family:var(--mono); font-size:12px; color:var(--cyan); text-align:right; white-space:nowrap; padding-top:2px; }
 
   /* ---------------- EDUCATION ---------------- */
   .edu-grid{
@@ -757,11 +759,11 @@
       <p class="eyebrow">Computer Science · York University · Toronto, ON</p>
       <h1 class="name">Sara Alavi</h1>
       <p class="tagline">
-        I like figuring out how systems behave, and how to make them
-        behave better: model outputs, databases, networks under attack.
+        I like figuring out how systems behave and how to make them
+        behave better: model outputs, databases, and networks under attack.
       </p>
       <p class="role-rotator">
-        Looking for full-time roles starting 2027 in <span class="rotator-word" id="rotatorWord">Software Engineering</span><span class="rotator-cursor" aria-hidden="true">|</span>
+        Looking for full-time <span class="rotator-word" id="rotatorWord">Software Engineering</span><span class="rotator-cursor" aria-hidden="true">|</span> roles, starting May 2027
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn--solid">See my work ↓</a>
@@ -786,19 +788,20 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a Computer Science student at York University who likes figuring
-            out how systems behave, and how to make them behave better. My work
-            spans <strong>evaluating AI model outputs</strong> for reliability,
-            <strong>securing networks</strong> against real attack scenarios, and
-            building small, deliberate software from the database up.
+            I'm a Computer Science student at York University, in my final year.
+            Recently that's meant <strong>evaluating AI model outputs</strong> for
+            reliability, <strong>securing networks</strong> against real attack
+            scenarios, and building small, deliberate software from the database up.
+            What connects it all is wanting to understand not just that something
+            works, but why.
           </p>
           <p>
             Before computer science, I completed a degree in <strong>Insurance Management</strong>
-            in Tehran, ranked first in my program, where I researched the socioeconomic
-            barriers behind the "poverty premium." That instinct for finding the mechanism
-            underneath a system is still how I approach every project below, and it's
-            part of why I'm just as drawn to product and business-facing roles as I am
-            to purely technical ones.
+            in Tehran and ranked first in my program. There, I researched the socioeconomic
+            barriers behind the "poverty premium" and what created them in the first place.
+            That instinct for finding the mechanism underneath a system still shapes how I
+            work today, and it's part of why I'm drawn to both product- and business-facing
+            roles, not just purely technical ones.
           </p>
         </div>
 
@@ -833,20 +836,23 @@
           </div>
           <p class="tl-org">CDW Canada · Toronto, ON</p>
           <ul class="tl-bullets">
-            <li>Built an AI-powered Word add-in integrating LLMs to flag issues in confidential client reports</li>
-            <li>Benchmarked and evaluated LLMs for model selection, and automated newsletter production with Power Automate</li>
+            <li>Built an AI-powered Word add-in integrating LLMs to flag grammar, structural, and readability issues in confidential Risk Advisory Services reports</li>
+            <li>Benchmarked locally hosted LLMs under client-confidentiality constraints, delivering structured recommendations for model selection</li>
+            <li>Automated cybersecurity newsletter production with Power Automate, aggregating and summarizing multi-source news for internal teams and clients</li>
           </ul>
         </div>
 
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-head">
-            <span class="tl-role">Undergraduate Research Assistant <span style="color:var(--muted); font-weight:400; font-size:15px;">(Volunteer)</span></span>
+            <span class="tl-role">Research Assistant</span>
             <span class="tl-date">Jan 2026 — Present</span>
           </div>
           <p class="tl-org">Elder Laboratory, York University · Toronto, ON</p>
           <ul class="tl-bullets">
-            <li>Ran controller experiments for a vision-based robotic tracking simulation, comparing visual servoing, finite-difference, and Kalman-filter control</li>
+            <li>Building a simulation framework to model target motion and evaluate tracking performance under increasingly complex conditions</li>
+            <li>Comparing multiple control strategies (visual servoing, finite-difference, Kalman filtering) using custom-built performance metrics</li>
+            <li>Creating visualizations to communicate tracking accuracy and controller robustness across experiments</li>
           </ul>
         </div>
 
@@ -858,7 +864,10 @@
           </div>
           <p class="tl-org">Polytechnique Montréal · Montréal, QC</p>
           <ul class="tl-bullets">
-            <li>Built a containerized maritime IoT/OT testbed (Docker, MQTT, Node-RED, CyberRange) and executed DoS / man-in-the-middle attack scenarios to document resilience</li>
+            <li>Designed and deployed a simulated maritime IoT/OT environment (Docker, MQTT, Node-RED, CyberRange) modeling shipboard sensor communication</li>
+            <li>Built publisher, broker, and subscriber components to emulate real-time sensor data exchange across distributed systems</li>
+            <li>Executed controlled denial-of-service and man-in-the-middle attacks to evaluate vulnerabilities and document system resilience</li>
+            <li>Documented technical workflows and findings to support reproducibility and future extension of the testbed</li>
           </ul>
         </div>
 
@@ -871,6 +880,7 @@
           <p class="tl-org">Outlier AI · Remote</p>
           <ul class="tl-bullets">
             <li>Evaluate LLM outputs for correctness, safety, and instruction adherence via rubric-based review</li>
+            <li>Investigate failure patterns like hallucinations and weak reasoning to support consistent model evaluation across a wide range of tasks</li>
           </ul>
         </div>
 
@@ -901,23 +911,23 @@
             <span class="card-title">Hotel Booking Service Database</span>
             <span class="card-badge">Team</span>
           </div>
-          <p class="card-desc">Normalized relational database for a hotel-booking platform, with ER diagrams and SQL validation across a six-person team.</p>
+          <p class="card-desc">Designed the database and structure behind a hotel-booking platform, similar to what powers sites like Booking.com. Built with a six-person team.</p>
           <div class="tag-row"><span class="tag">SQL</span><span class="tag">ER Modeling</span><span class="tag">Normalization</span></div>
         </div>
 
         <div class="card reveal" data-category="data">
           <div class="card-top">
             <span class="card-title">ML Algorithms &amp; Model Evaluation</span>
-            <span class="card-badge">Personal</span>
+            <span class="card-badge">Solo</span>
           </div>
-          <p class="card-desc">KNN, regression, and gradient descent pipelines; PCA/LDA for dimensionality reduction and decision-boundary visualization.</p>
+          <p class="card-desc">Built and compared several machine learning models from scratch, then visualized how they made decisions and where they performed well or poorly.</p>
           <div class="tag-row"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">NumPy</span></div>
         </div>
 
         <div class="card reveal" data-category="design">
           <div class="card-top">
             <span class="card-title">Smart Closet &amp; Wardrobe Tracker</span>
-            <span class="card-badge">Group</span>
+            <span class="card-badge">Team</span>
           </div>
           <p class="card-desc">High-fidelity Figma prototypes for a wardrobe-scanning app that recommends outfits from what you already own.</p>
           <div class="tag-row"><span class="tag">Figma</span><span class="tag">UI/UX</span><span class="tag">Prototyping</span></div>
@@ -926,9 +936,9 @@
         <div class="card reveal" data-category="software">
           <div class="card-top">
             <span class="card-title">YorkU Parking System</span>
-            <span class="card-badge">Group</span>
+            <span class="card-badge">Team</span>
           </div>
-          <p class="card-desc">Java/JavaFX parking booking app with CSV-based persistence, validated through Maven and JUnit test suites.</p>
+          <p class="card-desc">Built a desktop app for booking parking spots on campus, with automated tests to make sure bookings never double up.</p>
           <div class="tag-row"><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">JUnit</span></div>
         </div>
 
@@ -967,7 +977,7 @@
           <p class="skill-group-label">AI / Data</p>
           <div class="chip-row">
             <span class="chip">LLM Evaluation</span><span class="chip">scikit-learn</span>
-            <span class="chip">NumPy</span><span class="chip">pandas</span><span class="chip">Matplotlib</span>
+            <span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span>
           </div>
         </div>
         <div class="reveal">
@@ -999,19 +1009,28 @@
 
       <div class="lead-list reveal">
         <div class="lead-item">
-          <span class="lead-role">Logistics Executive</span>
-          <span class="lead-desc">ElleHacks &amp; CTRL+HACK+DEL, York University · hackathon logistics for 300+ participants</span>
+          <div class="lead-heading">
+            <span class="lead-role">Logistics Executive</span>
+            <span class="lead-org">ElleHacks &amp; CTRL+HACK+DEL, York University</span>
+          </div>
+          <p class="lead-desc">Coordinate day-of logistics for hackathons serving 300+ participants, including venue setup, workshop scheduling, prize distribution, and vendor communication.</p>
           <span class="lead-date">Jul 2025 — Present</span>
         </div>
         <div class="lead-item">
-          <span class="lead-role">English Conversation Partner</span>
-          <span class="lead-desc">York International (ECP) · guided fluency sessions for international students</span>
-          <span class="lead-date">Sep 2024 — Dec 2025</span>
+          <div class="lead-heading">
+            <span class="lead-role">Math Tutor</span>
+            <span class="lead-org">Math Club, Toronto</span>
+          </div>
+          <p class="lead-desc">Track each student's recurring mistakes to identify weak spots, then build targeted practice sets that focus time where it's needed most.</p>
+          <span class="lead-date">Sep 2024 — Present</span>
         </div>
         <div class="lead-item">
-          <span class="lead-role">Math Tutor</span>
-          <span class="lead-desc">Math Club, Toronto · one-on-one tutoring with data-driven progress tracking</span>
-          <span class="lead-date">Sep 2024 — Present</span>
+          <div class="lead-heading">
+            <span class="lead-role">English Conversation Partner</span>
+            <span class="lead-org">York International (ECP)</span>
+          </div>
+          <p class="lead-desc">Led guided conversation sessions to help international students build fluency and confidence in everyday English.</p>
+          <span class="lead-date">Sep 2024 — Dec 2025</span>
         </div>
       </div>
     </div>
@@ -1046,7 +1065,7 @@
   <!-- ================= CONTACT ================= -->
   <section id="contact">
     <div class="wrap contact">
-      <h2 class="contact-title reveal">Let's build<br>something.</h2>
+      <h2 class="contact-title reveal">Let's build<br>something together.</h2>
       <p class="contact-sub reveal">Open to research collaborations, internships, and anything that involves systems that watch and learn.</p>
       <div class="contact-links reveal">
         <a href="mailto:sara.alavi001@gmail.com" class="btn btn--solid">sara.alavi001@gmail.com</a>
